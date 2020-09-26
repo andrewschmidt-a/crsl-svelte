@@ -12,6 +12,11 @@
 	let dob;
 
 	$: age = calculate_age(dob)
+	_: data = `{
+				testData {
+				hello
+				}
+			}`
 </script>
 
 <main>
@@ -19,6 +24,7 @@
 	<input type="text" bind:value={name}>
 	<input type="date" bind:value={dob}>
 	<p>Your date of birth is: {dob} and your age is: {age}</p>
+	<p>{data.testData.hello}</p>
 </main>
 
 <style>
